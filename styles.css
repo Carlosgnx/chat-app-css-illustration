@@ -47,13 +47,17 @@ main {
   top: 0;
   left: 0;
   border-bottom-right-radius: 20rem;
-  background-color: var(--moderate-violet);
+  background: linear-gradient(
+    -320deg,
+    rgba(136, 56, 255, 1) 0%,
+    rgba(233, 66, 255, 1) 100%
+  );
 }
 .bg--right {
   bottom: 0;
   right: 0;
   border-top-left-radius: 20rem;
-  background-color: hsl(270, 20%, 93%);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 /*end-background*/
 
