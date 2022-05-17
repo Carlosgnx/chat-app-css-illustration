@@ -1,0 +1,322 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /*text*/
+  --pale-violet: hsl(276, 100%, 81%);
+  --moderate-violet: hsl(276, 55%, 52%);
+  --desaturated-dark-violet: hsl(271, 15%, 43%);
+  --grayish-blue: hsl(206, 6%, 79%);
+  --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --dark-grayish-violet: hsl(270, 7%, 64%);
+  /*gradients*/
+  --light-magenta: rgb(233, 66, 255);
+  --light-violet: rgb(136, 56, 255);
+  /*secondary*/
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 20%, 96%);
+  --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --very-light-magenta: hsl(289, 100%, 72%);
+}
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+/*background*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-color: var(--light-grayish-violet);
+  min-height: 100vh;
+  font-size: 1.6rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+.bg__decoration {
+  position: absolute;
+  height: 50%;
+  width: 20rem;
+}
+.bg--left {
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 20rem;
+  background-color: var(--moderate-violet);
+}
+.bg--right {
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 20rem;
+  background-color: hsl(270, 20%, 93%);
+}
+/*end-background*/
+
+/*phone*/
+.phone {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.3);
+  width: 26rem;
+  background-color: var(--white);
+  border-radius: 3rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+.phone__notch {
+  position: absolute;
+  background-color: white;
+  width: 50%;
+  height: 2rem;
+  top: 1rem;
+  left: 25%;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.phone__chat-header {
+  display: flex;
+  color: var(--light-grayish-violet);
+  align-items: center;
+  padding: 1rem;
+  padding-top: 3rem;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(136, 56, 255, 1) 0%,
+    rgba(233, 66, 255, 1) 100%
+  );
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.phone__chat-header img {
+  width: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 0.5rem;
+}
+.phone__chat-header div {
+  margin-right: auto;
+}
+.phone__chat-header p {
+  color: var(--pale-violet);
+  color: var();
+  font-size: x-small;
+}
+.phone__chat-box {
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  background-color: var(--light-grayish-violet);
+  font-size: x-small;
+  padding: 1rem;
+}
+.phone__chat-msg {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  max-width: 70%;
+}
+.phone__chat-box img {
+  max-width: 5rem;
+  border-radius: 1rem;
+  align-self: flex-start;
+}
+.msg--left {
+  color: var(--moderate-violet);
+  background-color: hsl(276, 100%, 95%);
+  border-bottom-left-radius: 0;
+}
+.msg--right {
+  align-self: flex-end;
+  background-color: var(--white);
+  border-bottom-right-radius: 0;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.msg--images {
+  background-color: transparent;
+  box-shadow: none;
+  max-width: 90%;
+  margin: 0;
+}
+.msg--price {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  color: var(--light-grayish-violet);
+  background: linear-gradient(
+    -90deg,
+    rgba(136, 56, 255, 1) 0%,
+    rgba(233, 66, 255, 1) 100%
+  );
+}
+.msg--price input {
+  margin-right: 1rem;
+}
+.msg--price h2 {
+  margin-left: auto;
+}
+.phone__chat-typebox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: var(--white);
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+.phone__chat-typebox p {
+  margin-left: 1rem;
+  color: var(--dark-grayish-violet);
+}
+/*end-phone*/
+
+/*description*/
+.description {
+  width: 31rem;
+  text-align: center;
+  z-index: 1;
+}
+.description h1 {
+  color: var(--very-dark-desaturated-violet);
+  font-size: 4.1rem;
+  font-weight: 500;
+}
+.description p {
+  color: var(--dark-grayish-violet);
+  margin-top: 3rem;
+  line-height: 3rem;
+}
+/*end-description*/
+
+/*----------Responsive----------*/
+
+/*Medium*/
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .bg__decoration {
+    height: 70%;
+  }
+  .description {
+    text-align: start;
+    width: 45rem;
+  }
+}
+/*Large*/
+@media (min-width: 1440px) {
+  main {
+    justify-content: center;
+  }
+  .phone {
+    margin: 0;
+  }
+  .description {
+    margin-left: 15rem;
+    width: 45rem;
+    text-align: start;
+  }
+  .bg__decoration {
+    height: 85%;
+    width: 42.7rem;
+  }
+  .bg--left {
+    left: -5%;
+    border-bottom-left-radius: 20rem;
+  }
+  .bg--right {
+    right: -5%;
+    border-top-right-radius: 20rem;
+  }
+}
+/*x-large*/
+@media (min-width: 1920px) {
+  html {
+    font-size: 80%;
+  }
+}
+/*icons*/
+.gg-chevron-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+.gg-chevron-left::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  left: 6px;
+  top: 4px;
+}
+
+.gg-more-vertical-alt {
+  transform: scale(var(--ggs, 1));
+}
+.gg-more-vertical-alt,
+.gg-more-vertical-alt::after,
+.gg-more-vertical-alt::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 100%;
+}
+.gg-more-vertical-alt::after,
+.gg-more-vertical-alt::before {
+  content: "";
+  position: absolute;
+}
+.gg-more-vertical-alt::after {
+  left: 0;
+  top: 6px;
+}
+.gg-more-vertical-alt::before {
+  top: -6px;
+  right: 0;
+}
+.gg-chevron-right {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  color: white;
+  background-color: var(--very-dark-desaturated-violet);
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+.gg-chevron-right::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(-45deg);
+  right: 6px;
+  top: 4px;
+}
